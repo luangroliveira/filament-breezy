@@ -273,7 +273,7 @@ class BreezyCore implements Plugin
         return $this;
     }
 
-    public function getForceTwoFactorAuthentication(): bool
+    public function getForceTwoFactorAuthentication(): ?bool
     {
         return $this->evaluate($this->forceTwoFactorAuthentication);
     }
