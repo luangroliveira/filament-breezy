@@ -23,20 +23,6 @@
         "pragmarx/google2fa": "^7.0|^8.0",
         "spatie/laravel-package-tools": "^1.14.0"
     },
-    "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9|v8.6.1",
-        "larastan/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.8|^9.0|^10.0",
-        "pestphp/pest": "^2.20|^3.7",
-        "pestphp/pest-plugin-arch": "^2.0|^v3.0.0",
-        "pestphp/pest-plugin-laravel": "^2.0|^v3.1.0",
-        "pestphp/pest-plugin-livewire": "^2.1|^v3.0.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
-    },
     "autoload": {
         "psr-4": {
             "Jeffgreco13\\FilamentBreezy\\": "src/"
