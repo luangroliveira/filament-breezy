@@ -269,7 +269,7 @@ class BreezyCore implements Plugin
         return $this->{$key}['navigationGroup'] ?? null;
     }
 
-    public function enableTwoFactorAuthentication(bool $condition = true, bool|Closure $force = false, string|Closure|array|null $action = TwoFactorPage::class,  string|false $authMiddleware = MustTwoFactor::class)
+    public function enableTwoFactorAuthentication(bool $condition = true, bool|Closure $force = false, string|Closure|array|null $action = TwoFactorPage::class, string|false $authMiddleware = MustTwoFactor::class)
     {
         $this->twoFactorAuthentication = $condition;
         $this->forceTwoFactorAuthentication = $force;
