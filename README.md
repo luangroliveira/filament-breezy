@@ -389,6 +389,7 @@ BreezyCore::make()
     ->enableTwoFactorAuthentication(
         force: false, // force the user to enable 2FA before they can use the application (default = false)
         action: CustomTwoFactorPage::class // optionally, use a custom 2FA page
+        authMiddleware: MustTwoFactor::class // optionally, customize 2FA aith middleware or disable it to register manually by setting false
     )
 ```
 
