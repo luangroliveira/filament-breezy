@@ -333,7 +333,7 @@ use Jeffgreco13\FilamentBreezy\Livewire\PersonalInfo;
 
 class CustomPersonalInfo extends PersonalInfo
 {
-    protected ?array $only = ['custom_name_field', 'custom_email_field'];
+    public ?array $only = ['custom_name_field', 'custom_email_field'];
 
     protected function getNameComponent(): Forms\Components\TextInput
     {
