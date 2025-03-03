@@ -89,6 +89,9 @@ return [
             ],
             'update' => [
                 'notify' => 'Token updated successfully!',
+                'submit' => [
+                    'label' => 'Update',
+                ],
             ],
             'copied' => [
                 'label' => 'I have copied my token',
