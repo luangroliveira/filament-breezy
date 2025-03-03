@@ -41,6 +41,8 @@ class BreezyCore implements Plugin
 
     protected $twoFactorAuthentication;
 
+    protected $twoFactorAuthenticationMiddleware = MustTwoFactor::class;
+
     protected $forceTwoFactorAuthentication;
 
     protected $twoFactorRouteAction;
@@ -81,7 +83,10 @@ class BreezyCore implements Plugin
             ->pages($this->preparePages());
         // If TwoFactor is enabled, register the middleware.
         if ($this->twoFactorAuthentication) {
-            $panel->authMiddleware([MustTwoFactor::class]);
+            if ($this->twoFactorAuthenticationMiddleware) {
+                $panel->authMiddleware([$this->twoFactorAuthenticationMiddleware]);
+            }
+
             Livewire::component('two-factor-page', Pages\TwoFactorPage::class);
         }
     }
@@ -264,11 +269,12 @@ class BreezyCore implements Plugin
         return $this->{$key}['navigationGroup'] ?? null;
     }
 
-    public function enableTwoFactorAuthentication(bool $condition = true, bool|Closure $force = false, string|Closure|array|null $action = TwoFactorPage::class)
+    public function enableTwoFactorAuthentication(bool $condition = true, bool|Closure $force = false, string|Closure|array|null $action = TwoFactorPage::class, string|false $authMiddleware = MustTwoFactor::class)
     {
         $this->twoFactorAuthentication = $condition;
         $this->forceTwoFactorAuthentication = $force;
         $this->twoFactorRouteAction = $action;
+        $this->twoFactorAuthenticationMiddleware = $authMiddleware;
 
         return $this;
     }
