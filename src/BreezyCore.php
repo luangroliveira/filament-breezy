@@ -349,7 +349,7 @@ class BreezyCore implements Plugin
         return $forceTwoFactor && ! $this->auth()->user()?->hasConfirmedTwoFactor();
     }
 
-    public function enableSanctumTokens(bool $condition = true, ?array $permissions = null)
+    public function enableSanctumTokens(bool $condition = true, null|array|Closure $permissions = null)
     {
         $this->sanctumTokens = $condition;
         if (! is_null($permissions)) {
@@ -361,7 +361,7 @@ class BreezyCore implements Plugin
 
     public function getSanctumPermissions(): array
     {
-        return collect($this->sanctumPermissions)->mapWithKeys(function ($item, $key) {
+        return collect($this->evaluate($this->sanctumPermissions))->mapWithKeys(function ($item, $key) {
             $key = is_string($key) ? $key : strtolower($item);
 
             return [$key => $item];
