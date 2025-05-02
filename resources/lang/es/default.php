@@ -129,8 +129,8 @@ return [
             ],
         ],
         'browser_sessions' => [
-            'title' => 'Sesiones de Navegador',
-            'description' => 'Administra tus sesiones activas.',
+            'heading' => 'Sesiones de Navegador',
+            'subheading' => 'Administra tus sesiones activas.',
             'label' => 'Sesiones de Navegador',
             'content' => 'Si es necesario, puede cerrar todas sus otras sesiones de navegador en todos sus dispositivos. Algunas de sus sesiones recientes se muestran a continuación; sin embargo, esta lista puede no ser exhaustiva. Si cree que su cuenta ha sido comprometida, también debería actualizar su contraseña.',
             'device' => 'Este dispositivo',
