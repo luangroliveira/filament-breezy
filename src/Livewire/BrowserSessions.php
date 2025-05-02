@@ -10,7 +10,6 @@ use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Jeffgreco13\FilamentBreezy\Livewire\MyProfileComponent;
 use Jenssegers\Agent\Agent;
 
 class BrowserSessions extends MyProfileComponent
