@@ -98,8 +98,8 @@ return [
             ],
         ],
         'browser_sessions' => [
-            'title' => 'Browser Sessions',
-            'description' => 'Manage your active sessions.',
+            'heading' => 'Browser Sessions',
+            'subheading' => 'Manage your active sessions.',
             'label' => 'Browser Sessions',
             'content' => 'If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.',
             'device' => 'This device',
