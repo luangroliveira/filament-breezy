@@ -135,7 +135,7 @@ class BreezyCore implements Plugin
 
             if ($this->myProfile['shouldRegisterUserMenu']) {
                 if ($panel->hasTenancy()) {
-                    $tenantId = request()->route()->parameter($panel->getTenantSlugAttribute() ?? 'tenant');
+                    $tenantId = request()->route()->parameter('tenant');
                     if ($tenantId && $tenant = app($panel->getTenantModel())::where($panel->getTenantSlugAttribute() ?? 'id', $tenantId)->first()) {
                         $panel->userMenuItems([
                             'account' => MenuItem::make()->url($this->getMyProfilePageClass()::getUrl(panel: $panel->getId(), tenant: $tenant))->label($this->myProfile['userMenuLabel']),
