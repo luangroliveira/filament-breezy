@@ -147,6 +147,7 @@ return [
         'tooltip' => 'Kopiert!',
     ],
     'fields' => [
+        'avatar' => 'Profilbild',
         'email' => 'E-Mail',
         'login' => 'Einloggen',
         'name' => 'Benutzername',
